@@ -3,7 +3,8 @@
   margin: 0;
   box-sizing: border-box;
 }
-ul,li {
+ul,
+li {
   list-style: none;
 }
 a {
@@ -108,46 +109,59 @@ a {
   opacity: 1;
   top: 0;
 }
-/* 헤더 */
-header{
+/*상단 */
+header {
   padding: 20px 100px;
   display: flex;
   justify-content: space-between;
+  background-color: #e0e0e0;
 }
 /* 메뉴 */
-nav{
+nav {
   background-color: aqua;
 }
-.menu{
+.menu {
   width: 500px;
   text-align: center;
   display: flex;
 }
-.menu >li{
+.menu > li {
   flex: 1;
   position: relative;
 }
-.submenu{
-  position: absolute;
-  top: 100%;
-  left:0;
-  width: 100%;
-  display: none;
-}
-.menu > li >a{
+.menu > li > a {
   width: 100%;
   /* background-color: red; */
   display: block;
-  
+  padding: 10px 0;
+  background-color: red;
 }
 /* 각 메뉴의 서브메뉴 */
-.menu > li:hover .submenu{
+.menu > li:hover .submenu {
   display: block;
 }
 /* 전체메뉴의 서브메뉴 */
- /* .menu:hover .submenu{
+/* .menu:hover .submenu{
   display: block;
  } */
-.submenu >li>a{
-  
+.menu > li:hover > a {
+  background-color: aqua;
+  color: red;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  z-index: 2;
+}
+.submenu > li > a {
+  padding: 10px 0;
+  display: block;
+  background-color: aqua;
+}
+.submenu>li>a:hover{
+  background-color: chartreuse;
+  color: red;
 }
