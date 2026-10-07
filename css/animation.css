@@ -1,0 +1,131 @@
+.loading{
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    /* animation-name: loading;
+    animation-duration:1s;지속시간
+    animation-timing-function:linear;속도를 일정하게
+    animation-iteration-count: infinite;infinite:계속사용 */
+    animation: loading 1s linear infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+.notice-btn{
+    all:unset;
+    border:1px solid #ddd;
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    animation: BtnMove 1.5s infinite alternate;/*alternate:정방향에서 역방향으로 왔다갔다함*/
+}
+.notice-btn:hover{
+    background-color: rgb(3, 224, 224);
+    cursor: pointer;
+}
+@keyframes BtnMove{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+.banner{
+    width: 600px;
+    padding: 80px 40px;
+    background-color: #333;
+    color: #fff;
+}
+.banner h1{
+    animation: titleShow 1s ease-out 1;/*ease-out:빠르게시작 점점느려짐*/
+}
+.banner p{
+    animation: textShow 1s ease-out;
+    animation-delay: 0.5s;
+    /* 대기시간동안 from opacity:0이 유지됨 */
+    animation-fill-mode: backwards;
+}
+@keyframes titleShow{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes textShow{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.alarm{
+    display: inline-block;
+    font-size: 50px;
+    animation: shake 0.5s infinite;
+}
+@keyframes shake {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-15deg);
+    }
+    50%{
+        transform: rotate(15deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#loading{
+    width: 600px;
+    height: 40px;
+    background-color: lightcyan;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+#loading>div{
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transform: skew(-24deg);
+    animation: flow-light 4s linear infinite;
+}
+#loading>div>div{
+    flex:1;
+}
+#loading>div>div:nth-child(odd){
+    background-color: blue;
+}
+@keyframes flow-light {
+    from{
+        left:-600px;
+    }
+    to{
+        left: 0;
+    }
+}
