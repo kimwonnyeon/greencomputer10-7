@@ -11,6 +11,8 @@
   width: 100px;
   height: 100px;
   border: 1px solid #333;
+  /* 3d 공간의 깊이 */
+  perspective: 100px;
 }
 .origin > div {
   width: 100%;
@@ -26,4 +28,43 @@
 }
 .moveXY:hover {
   transform: translate(10px, 20px);
+}
+/* 확대 축소 */
+.scaleX:hover{
+    transform: scaleX(1.5);
+}
+.scaleY:hover{
+    transform: scaleY(1.5);
+}
+.scale:hover{
+    transform: scale(1.5);
+}
+/* 회전 변형 */
+#rotate1{
+    /* transform: rotate(40deg); */
+}
+#rotate1:hover img{
+    transform: rotate(40deg);
+}
+#rotate2 img:hover{
+    transform: rotate(-40deg);
+}
+/* 3d 회전 */
+/* y축 기준 회전 */
+#rotate3 img:hover{
+    transform: rotateY(45deg);
+}
+/* x축 기준 회전 */
+#rotate4 img:hover{
+    transform: rotateX(45deg);
+}
+/* 비틀기 변형 */
+.skewX:hover{
+    transform: skewX(30deg);
+}
+.skewY:hover{
+    transform: skewY(-30deg);
+}
+.skewXY:hover{
+    transform: skew(-30deg,-15deg);
 }

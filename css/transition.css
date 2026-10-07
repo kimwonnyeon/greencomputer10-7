@@ -1,0 +1,27 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border: 1px solid #333;
+  transition: all 0.3s /*ease-in-out*/;
+  /* transition-property:width,height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out; */
+}
+.bgtr1:hover {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;/*클릭유도*/
+}
+.bgtr2:hover{
+    border-radius: 50%;
+    background-color: purple;
+}
+.bgtr3:hover{
+    border-radius: 50%;
+    /* border-style: dotted;
+    border-width: 5px;
+    border-color: red; */
+    border:5px dotted red;
+    transform:rotate(60deg) translate(100px);
+}
