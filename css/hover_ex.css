@@ -37,7 +37,7 @@
 }
 /* 가상공간 */
 .text-area p::after {
-  content: "";
+  content: " ";
   position: absolute;
   top: 45px;
   left: 50%;
@@ -98,7 +98,7 @@
 }
 /* 가상 공간 */
 .text-area2 p::after {
-  content: "";
+  content: " ";
   position: absolute;
   top: 45px;
   left: 50%;
