@@ -1,0 +1,13 @@
+
+p::before{
+    content:"🍟";
+}
+p::after{
+    content:"0000";
+}
+h2::after{
+    content:"\f015";
+    font-family:"Font Awesome 6 Free";
+    color: red;
+    font-size: 12px;
+}

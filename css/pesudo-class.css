@@ -1,0 +1,35 @@
+/* 첫번째 자식 */
+ul li:first-child{
+    color: red;
+}
+/* 마지막 자식 */
+ul li:last-child{
+    color: blue;
+}
+/* n번째 자식 */
+ul li:nth-child(2){
+    color: aqua;
+}
+/* 짝수: 2n,even*/
+ul li:nth-child(even){
+    background-color: burlywood;
+}
+
+/* 홀수:2n+1,odd */
+ul li:nth-child(odd){
+    background-color: lightgreen;
+}
+.box >p{
+    color: red;
+}
+/* +:형제 선택자/바로 다음 형제 선택 */
+p+p{
+    background-color: aqua;
+}
+h2+p{
+    color: red;
+}
+/* ~ :뒤에 나오는 모든 형제 선택 */
+h2 ~p{
+    color: violet;
+}
